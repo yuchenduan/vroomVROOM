@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actioncable (5.2.0)
+      actionpack (= 5.2.0)
+      nio4r (~> 2.0)
+      websocket-driver (>= 0.6.1)
+    actionmailer (5.2.0)
+      actionpack (= 5.2.0)
+      actionview (= 5.2.0)
+      activejob (= 5.2.0)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 2.0)
+    actionpack (5.2.0)
+      actionview (= 5.2.0)
+      activesupport (= 5.2.0)
+      rack (~> 2.0)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (5.2.0)
+      activesupport (= 5.2.0)
+      builder (~> 3.1)
+  
