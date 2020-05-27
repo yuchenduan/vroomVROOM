@@ -45,4 +45,34 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
-    autoprefixer-rails (8
+    autoprefixer-rails (8.6.2)
+      execjs
+    awrence (1.0.0)
+    bcrypt (3.1.12)
+    binance-ruby (0.2)
+      activesupport (~> 5.1)
+      awrence (~> 1.0)
+      httparty (~> 0.15)
+    bindex (0.5.0)
+    bittrex (0.0.6)
+      faraday (>= 0.9.0)
+    bootsnap (1.3.0)
+      msgpack (~> 1.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+    builder (3.2.3)
+    byebug (10.0.2)
+    coderay (1.1.2)
+    coinmarketcap (0.2.4)
+      httparty
+      nokogiri
+    concurrent-ruby (1.0.5)
+    crass (1.0.4)
+    cryptoexchange (0.22.0)
+      http (~> 3.0.0)
+      lru_redux
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railt
