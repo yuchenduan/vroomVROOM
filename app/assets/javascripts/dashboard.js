@@ -30,4 +30,25 @@
     row1.parentNode.parentNode.style.height = "10vh";
     row1.parentNode.parentNode.children[0].style.height = "100%";
     row1.parentNode.parentNode.children[1].style.display = "none";
-  
+  }
+
+
+})
+ });
+
+document.getElementById("search").addEventListener("keyup", function(){
+  let search = document.getElementById("search").value.toUpperCase();
+  document.querySelectorAll('.tablerow1').forEach(function(row){
+    if(search == row.children[0].children[0].children[1].innerText){
+      row.style.display = "flex";
+    }else if(search == ""){
+      row.style.display = "flex";
+    }else {
+      row.style.display = "none";
+    }
+  })
+});
+
+document.querySelector(".dropdown-toggle").addEventListener('click', function(){
+  document.querySelector(".dropdown-toggle").parentNode.classList.add('open')
+});
