@@ -224,3 +224,34 @@ $(function(){
       var animFrameAmount = (settings.animation)? 1 / CapValue(settings.animationSteps, Number.MAX_VALUE, 1) : 1,
           cnt =(settings.animation)? 0 : 1;
       requestAnimFrame(function() {
+          cnt += animFrameAmount;
+          animateFrame(cnt, drawData);
+          if (cnt <= 1) {
+            requestAnimFrame(arguments.callee);
+          } else {
+            settings.afterDrawed.call($this);
+          }
+      });
+    }
+    function Max(arr) {
+      return Math.max.apply(null, arr);
+    }
+    function Min(arr) {
+      return Math.min.apply(null, arr);
+    }
+    function isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+    function CapValue(valueToCap, maxValue, minValue) {
+      if (isNumber(maxValue) && valueToCap > maxValue) return maxValue;
+      if (isNumber(minValue) && valueToCap < minValue) return minValue;
+      return valueToCap;
+    }
+    return $this;
+  };
+})(jQuery);
+
+
+setTimeout(function(){
+  document.querySelector(".doughnutSummaryNumber").innerText = '$' + document.querySelector(".doughnutSummaryNumber").innerText
+ }, 2000);
