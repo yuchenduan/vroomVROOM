@@ -3,4 +3,16 @@
 * ------------------------------------- */
 
 .alert {
-  margin
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+.alert-info {
+  background: $green;
+}
+.alert-warning {
+  background: $red;
+}
+#alert{
+	margin-left: 0px !important;
+}
