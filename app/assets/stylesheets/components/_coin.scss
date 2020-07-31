@@ -126,3 +126,69 @@ span {
 	height: 4px;
 	background: #d57e08;
 	border-top: 2px solid #c47207;
+	margin: -10px 0;
+}
+
+.coin .front .shapes div:after, .coin .back .shapes div:after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	background: #d57e08;
+	border-top: 2px solid #c47207;
+	margin: 8px 0;
+}
+
+.coin .front .shape_l, .coin .back .shape_l {
+	float: left;
+}
+
+.coin .front .shape_r, .coin .back .shape_r {
+	float: right;
+}
+
+.coin .front .top, .coin .back .top {
+	font-size: 30px;
+	color: #d67f08;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.coin .front .bottom, .coin .back .bottom {
+	font-size: 30px;
+	color: #d67f08;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.coin .shadow {
+	width: 0%;
+	height: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	left: 0;
+	bottom: -50px;
+	border-radius: 50%;
+	z-index: -1;
+	margin: 185px 7px 0 7px;
+	animation: swift 1.5s infinite ease;
+}
+
+@keyframes swift {
+	0% {
+		opacity: 0.8;
+	}
+
+	50% {
+		opacity: 0.4;
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 0.8;
+	}
+}
