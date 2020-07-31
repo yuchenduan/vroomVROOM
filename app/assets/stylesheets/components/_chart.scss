@@ -47,4 +47,33 @@ align-items: center;
 }
 .doughnutSummary {
   width: 230.5px;
-heigh
+height: 230.5px;
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0 !important;
+}
+.doughnutSummaryTitle {
+  // position: absolute;
+  // top: 50%;
+  // width: 100%;
+  // margin-top: -27%;
+  font-size: 22px;
+  letter-spacing: .06em;
+  color: white;
+}
+.doughnutSummaryNumber {
+  // position: absolute;
+  // top: 50%;
+  // width: 100%;
+  // margin-top: -15%;
+  font-size: 55px;
+  color: white;
+}
+.chart path:hover { opacity: 0.65; }
+
+svg {
+  position: absolute;
+}
