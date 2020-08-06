@@ -14,4 +14,33 @@ $gray-base:       $gray;
 $brand-primary:   $blue;
 $brand-success:   $green;
 $brand-info:      $yellow;
-$brand-danger:    
+$brand-danger:    $red;
+$brand-warning:   $orange;
+
+// Buttons & inputs' radius
+$border-radius-base:  2px;
+$border-radius-large: 2px;
+$border-radius-small: 2px;
+
+
+// Patch to make simple_form compatible with bootstrap 3
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $red;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.custom-select.is-invalid {
+  border-color: $red;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip,
+.form-control.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.was-validated .custom-select:
