@@ -1,0 +1,141 @@
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
+.wrapper{
+  background-color: $forth-color;
+}
+.container-fluid{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-color{
+  background-color: $forth-color !important;
+}
+.navbar-transparent{
+  position: fixed;
+  background-color: transparent !important;
+}
+.navbar{
+  transition: 0.7s background-color ease;
+  position: fixed;
+  background-color: $forth-color;
+  margin-bottom: 0 !important;
+  border: none;
+  width: 100vw;
+  height: 60px;
+  color: $light-gray;
+}
+#navbar{
+  display: flex !important;
+  justify-content: flex-end;
+  width: 66.666vw;
+  color: $light-gray;
+  text-align:center;
+  vertical-align: center;
+  margin-right: 10px;
+}
+.navbar-header{
+  display: flex;
+  justify-content: flex-start;
+  width: 33.333vw;
+  font-size: 24px;
+  margin-top: 5px;
+}
+.dropdown-toggle {
+  margin-top: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Raleway"; 
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #262626;
+  text-decoration: none;
+  background-color: #e5e5e5;
+  display: initial;
+  left: auto;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: $secondary-color !important;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: $secondary-color !important;
+}
+#right-dropdown {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  color: black !important;
+}
+ul.dropdown-lr {
+  width: 300px;
+}
+ul.nav.navbar-nav.navbar-center{
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: 10px;
+  font-size: 25px;
+}
+/* mobile fix */
+@media (max-width: 768px) {
+  .dropdown-lr h3 {
+    color: black;
+  }
+  .dropdown-lr label {
+    color: black;
+  }
+}
+
+.brand-name {
+ font-family: "Raleway";
+}
+
+#center-links {
+  width: 51%;
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway";
+  li{
+    font: bold 16px;
+  }
+}
+
+// /* Main navbar */
+// .navbar {
+//   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+//   background: #EBF0F1;
+//   transition: all 0.3s ease;
+//   height: 80px;
+//   padding: 0px 30px;
+//   // display: flex;
+//   // align-items: center;
+//   justify-content: space-between;
+//   box-shadow: 0 5px 5px -5px #333;
+// }
+
+// // /* Logo */
+// .navbar-wagon-brand img {
+//   height: 50px;
+//   margin-top: 15px;
+// }
+
+// span.brand-name {
+//   font-size: 30px;
+//   margin-top: 15px;
+//   vertical-align: -15px;
+// }
+
+// // /* User Avatar */
+// // // .navbar-wagon .avatar {
+// // //   height: 35px;
+// // //   width: 35px;
+// // //   border-radius: 50%;
+// // // }
+
+// // /* Right section */
+// .collapse.navbar-collapse {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+// .navbar-right {
