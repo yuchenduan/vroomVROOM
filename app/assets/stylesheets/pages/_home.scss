@@ -1,0 +1,22 @@
+// Specific CSS for your home-page
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  font-family: 'Roboto', serif;
+}
+
+body {background:#ecf0f1; font-family: 'Roboto', serif; margin:0; color:#888; height:100%; display:flex; flex-direction:column}
+.content{
+  flex: 1 0 auto;
+}
+
+.banner {
+  background-image: url("https://images.pexels.com/photos/755726/pexels-photo-755726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+    ");
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 4;
+  text-align:center;
+  color:#fff;
+  font-size:60px;
