@@ -20,3 +20,52 @@ body {background:#ecf0f1; font-family: 'Roboto', serif; margin:0; color:#888; he
   text-align:center;
   color:#fff;
   font-size:60px;
+  height:100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 5px #333
+}
+
+.banner p {
+  font-size: 85px;
+}
+
+.banner-learnmore{
+  margin-top: 20px;
+  padding:0 15px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-signup{
+  background: $main-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 50px;
+  & #form-actions{
+    color: black;
+  }
+}
+.header{
+  height:60px;
+  background:#00DAFC;
+  color:#fff;
+  width:100%;
+}
+.logo{
+  margin:0;
+  line-height:50px;
+  float:left;
+}
+.nav{
+ 
