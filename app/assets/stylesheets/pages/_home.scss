@@ -116,4 +116,45 @@ body {background:#ecf0f1; font-family: 'Roboto', serif; margin:0; color:#888; he
   margin-right: 80px;
 }
 
-@med
+@media(max-width: 1030px){
+
+  html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: hidden;
+  }
+  .navbar{
+    display:none;
+  }
+
+  .coin{
+    margin-right: 43%;
+    margin-top: 12%;
+  }
+  .footer{
+    display: none !important;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  #typed-text{
+    display: none;
+  }
+
+  .flexy{
+    display: none;
+  }
+
+  .container{
+    display: none !important;
+  }
+
+  .mobile-banner{
+  background-image: url("https://images.pexels.com/photos/755726/pexels-photo-755726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+    ");
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-h
