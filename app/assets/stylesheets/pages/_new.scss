@@ -1,0 +1,170 @@
+
+/* API boxes */
+body{
+  // background-image: url('sarah.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#panel-add{
+  // margin-top: 10%;
+  // width: 75%;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  text-align: center;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  position: absolute;
+  top: 13%;
+  right: 12%;
+  border-radius: 5%;
+  background: ghostwhite;
+  margin-top: 5%;
+}
+#api-title, #alert-title {
+  margin-left: 2%;
+  margin-top: 0%;
+  margin-bottom: 3%;
+  color: ghostwhite;
+  font-size: 48px;
+}
+#api-list {
+  position: static;
+  margin-top: 7%;
+}
+#alert-list{
+  position: static;
+  display: table;
+  // width: 200%;
+  margin-top: 10%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-left: -16%;
+}
+// #panel-add{
+//   display: flex;
+//   margin-top: 3%;
+// }
+// #panel-add{
+//   input{
+//     width: 267.5%;
+//   }
+// }
+// #panel-show{
+//   display: flex;
+//   justify-content: space-between;
+//   margin-top: 5%;
+// }
+// .api-new {
+//   margin-left: 10%;
+// }
+/* ---------- LOGIN ---------- */
+// #panel-add{
+//   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+//   width: 120%;
+//   margin-top: 40%;
+// }
+#panel-add h2 {
+  background: $main-color;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  font-size: 28px;
+  padding: 20px 26px;
+}
+
+#panel-add h2 span[class*="fontawesome-"] {
+  margin-right: 14px;
+}
+
+#panel-add fieldset {
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 26px;
+}
+
+#panel-add fieldset p {
+  color: #777;
+  margin-bottom: 14px;
+}
+
+#panel-add fieldset p:last-child {
+  margin-bottom: 0;
+}
+
+#panel-add fieldset input {
+  border-radius: 3px;
+}
+
+#panel-add fieldset input[type="email"], #panel-add fieldset input[type="password"] {
+  background: #eee;
+  color: #777;
+  padding: 4px 10px;
+;
+}
+
+#panel-add fieldset input[type="submit"] {
+  background: #33cc77;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 0;
+
+}
+
+#panel-add fieldset input[type="submit"]:hover {
+  background: #28ad63;
+}
+
+/* DivTable.com */
+.divTable{
+  display: table;
+  // width: 200%;
+  margin-top: 5%;
+  text-align: left;
+  // border-collapse: collapse;
+  margin-left: 12%;
+}
+.divTableHeading :first-child {
+  border-top-left-radius: 10px;
+}.divTableHeading :last-child {
+  border-top-right-radius: 10px;
+}
+.divTableRow {
+  display: table-row;
+}
+.divTableCell, .divTableHead {
+  display: table-cell;
+  border: 0.5px solid #999999;
+  padding: 3px 10px;
+  width: 32.5%;
+  font-size: 24px;
+}
+.divTableCell.api{
+  color: ghostwhite;
+}
+.divTableCell.alert{
+  color: ghostwhite;
+}
+.divTableHeading {
+  background-color: ghostwhite;
+  display: table-header-group;
+  color: $forth-color;
+}
+.divTableBody {
+  display: table-row-group;
+  width: 711px;
+}
+.delete{
+  margin-left: 50%;
+}
+.fa-trash-alt{
+  color: $secondary-color;
+}
+
+.alert-new {
+  margin-left: 25%;
+}
+
+#alert {
+  margin-left: 35%;
+}
+
