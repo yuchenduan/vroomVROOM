@@ -17,4 +17,30 @@ class AlertsController < ApplicationController
 
   def update
     @alert.update(alert_params)
-  
+    redirect_to alert_path(@alert)
+  end
+
+  def new
+    @alerts = Alert.where(user: current_user)
+    @alert = Alert.new
+    @coin_name = params[:coin_name]
+    @coin_price = params[:coin_price].to_f.round(2)
+  end
+
+  def show
+  end
+
+  def edit
+  end
+
+  private
+
+  def set_alert
+    @alert = Alert.find(params[:id])
+  end
+
+  def alert_params
+    params.require(:alert).permit(:coin_name, :price_above, :price_below)
+  end
+
+end
