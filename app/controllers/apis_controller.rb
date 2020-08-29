@@ -8,4 +8,31 @@ class ApisController < ApplicationController
   end
 
   def create
-    @api = Api.new
+    @api = Api.new(api_params.merge(user: current_user))
+    if @api.save!
+      redirect_to new_api_path, notice: 'API connection was successfully created'
+    else
+      render :new
+    end
+  end
+
+  def update
+  end
+
+  def destroy
+    @api = Api.find(params[:id])
+    @api.destroy
+    redirect_to new_api_path
+  end
+
+  private
+
+  def set_api
+    @api = Api.find(params[:id])
+  end
+
+  def api_params
+    params.require(:api).permit(:publishable_key, :secret_key, :exchange_id)
+  end
+end
+
