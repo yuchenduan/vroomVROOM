@@ -29,4 +29,7 @@ def response_to_sign_up_failure(resource)
   if resource.email == "" && resource.password == nil
     redirect_to root_path, alert: "Please fill in the form"
   elsif User.pluck(:email).include? resource.email
-  
+    redirect_to root_path, alert: "Email already exists"
+  end
+end
+end
