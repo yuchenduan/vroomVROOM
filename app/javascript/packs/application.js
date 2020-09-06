@@ -1,2 +1,8 @@
 import "bootstrap";
-// import { homeS
+// import { homeScroll } from "../components/home";
+// homeScroll();
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
+
+
+
