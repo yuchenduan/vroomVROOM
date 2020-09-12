@@ -27,4 +27,24 @@
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-  <meta name="twitter:
+  <meta name="twitter:title" content="<%= meta_title %>">
+  <meta name="twitter:description" content="<%= meta_description %>">
+  <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+  <meta name="twitter:image:src" content="<%= meta_image %>">
+</head>
+
+<body style="background-image: url(<%= image_path 'sarah.png'%>)">
+  <%= render 'shared/navbar' %>
+  <%#= render 'shared/flashes' %>
+
+  <div class="content">
+    <%= yield %>
+  </div>
+
+  <%= render 'shared/footer' %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</htm
