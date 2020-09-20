@@ -8,4 +8,17 @@
   </div>
   <div class="tablecontainer">
     <div class="tableheader">
-      <div class="tablerowcolum"
+      <div class="tablerowcolum">Coin</div>
+      <div class="tablerowcolum">Holdings</div>
+      <div class="tablerowcolum">Price</div>
+      <div class="tablerowcolum">24hr</div>
+      <div class="tablerowcolum">Charts</div>
+      <div class="tablerowcolum end">Alerts</div>
+    </div>
+    <div class="tablecontentcontainer">
+      <% @total_balance.each do |b| %>
+      <% alert_icon = b[:alert] == true ? "notification_on.png" : "notification.png"  %>
+      <% arrow_icon = b[:change] < 0 ? "redarrow.png" : "greenarrow.png"  %>
+      <div class="tablerow1">
+        <div class="tablerowcontent">
+          <div class="tablerowcolum indentrow"><%= image_tag "coinlog
