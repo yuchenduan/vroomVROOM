@@ -28,4 +28,13 @@
           <div class="tablerowcolum tradingview"><%= image_tag "tradingview-icon.png", size: "36" %> </div>
           <div class="tablerowcolum"><%= link_to(image_tag(alert_icon), new_alert_path(coin_name: b[:asset], coin_price: b[:price]))%></div>
         </div>
-        <div class="tablehidden
+        <div class="tablehiddenrowcontent">
+          <div class="tradingview-widget-container">
+            <div id="<%= b[:asset] %>" class="chart"></div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
