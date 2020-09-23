@@ -61,4 +61,26 @@
                                 <p class="card-text">Security will always be a top priority in every decision we make, and we incorporate multiple layers of protection, using the most reliable and effective security technologies available to keep your funds secure (none of this is implemented yet, please don't register your API keys!)</p>
                             </div>
                     </div>
- 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner-signup">
+    <h2>Sign up</h2>
+    <div id="form-inputs">
+        <!-- TODO: add sign up form -->
+      <%= simple_form_for(:user, :url => registration_path(:user))  do |f| %>
+      <%= f.input :email, placeholder: 'user@domain.com', required: true %>
+      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)%>
+      <%= f.input :password_confirmation, required: true %>
+    </div>
+       <div id="form-actions">
+          <%= f.button :submit, "Sign up" %>
+       </div>
+      <% end %>
+</div>
+
+<script>
+    function initUpd
