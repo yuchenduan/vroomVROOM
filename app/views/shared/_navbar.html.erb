@@ -1,0 +1,122 @@
+
+<div class="wrapper">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span><%= link_to root_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "ct3-transparent.png", height: 50 %>
+        <% end %>
+        </span>
+      <span class="brand-name">CoinTrail</span>
+    </div>
+
+    <% if user_signed_in? %>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-center" id="center-links">
+        <strong><li><%= link_to 'Dashboard', dashboard_path%></li></strong>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="right-dropdown">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %><span class="caret sr-only"></span></a>
+          <ul class="dropdown-menu dropdown-lr" role="menu">
+            <li class="col-lg-12 ">
+              <%= link_to profile_path do %>
+              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            </li>
+            <li class="nav-item">
+             <%= link_to new_api_path do %>
+             <i class="fa fa-cog nav-link"></i>  <%= t(".api", default: "API's") %>
+             <% end %>
+             <li class="nav-item">
+              <%= link_to new_alert_path do %>
+              <i class="fa fa-bell nav-link"></i>  <%= t(".alert", default: "Alerts") %>
+              <% end %>
+              <li role="separator" class="divider"></li>
+              <li class="nav-item">
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    <% else %>
+
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+            <div class="col-lg-12" style="color: #752B6E">
+              <div class="text-center">
+                <h3><b>Register</b></h3>
+              </div>
+                <%= simple_form_for(:user, :url => registration_path(:user), html: { id: "ajax-register-form", role: "form", autocomplete: "on" })  do |f| %>
+                <%= f.error_notification %>
+                <div class="form-group">
+                  <%= f.input :email, placeholder: 'user@domain.com', required: true, autofocus: true, html: { class: "form-control", tabindex: "1", name: "email", id: "email" }%>
+                </div>
+                <div class="form-group">
+                  <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), html: { class: "form-control", tabindex: "2", name: "password", id: "password" } %>
+                </div>
+                <div class="form-group">
+                  <%= f.input :password_confirmation, required: true, html: { class: "form-control", tabindex: "2", name: "password_confirmation", id: "password_confirmation" }%>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                      <%= f.button :submit, "Register", html: { class: "form-control btn btn-secondary", name: "register-submit", id: "register-submit", tabindex: "4" }%>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated slideInLeft" role="menu">
+            <div class="col-lg-12" style="color: #752B6E">
+              <div class="text-center">
+                <h3><b>Log In</b></h3>
+              </div>
+              <%= simple_form_for(:user, :url => session_path(:user), html: { id: "ajax-login-form", role: "form", autocomplete: "on" })  do |f| %>
+                <div class="form-group">
+                  <p> <%= f.input :email, required: false, autofocus: true, html: { class: "form-control", tabindex: "1", name: "email", id:"email", placeholder: "Email", autocomplete: "off"} %></p>
+                </div>
+
+                <div class="form-group">
+                  <p><%= f.input :password, required: false, html: { class: "form-control", tabindex: "2", name: "password", id: "password", placeholder: "Password", autocomplete: "off"} %></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <p><%= f.input :remember_me, as: :boolean, html: { name: "remember", id: "remember", tabindex: "4" }%></p>
+                    </div>
+                    <div class="col-xs-5 pull-right">
+                      <%= f.button :submit, "Log In", html: { class: "form-control btn btn-secondary", name: "login-submit", id: "login-submit", tabindex: "4" }%>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </ul>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</nav>
+</div>
+
