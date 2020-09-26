@@ -83,4 +83,22 @@
 </div>
 
 <script>
-    function initUpd
+    function initUpdateNavbarOnScroll() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.add("navbar-transparent")
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= window.innerHeight) {
+                    navbar.classList.add('navbar-color');
+                    navbar.classList.remove("navbar-transparent")
+                } else {
+                    navbar.classList.remove('navbar-color');
+                    navbar.classList.add("navbar-transparent")
+                }
+            });
+        }
+    }
+    initUpdateNavbarOnScroll();
+</script>
+
+<div class="mobile-ban
