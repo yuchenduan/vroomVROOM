@@ -1,0 +1,28 @@
+
+
+
+<div class="grid">
+
+  <div id="profile">
+
+    <h2><span class="fontawesome"></span>
+      <% if current_user.first_name.nil? && current_user.last_name.nil? %>
+      <%= "Please edit your profile" %>
+      <% else %>
+      <%= current_user.first_name.upcase %> <%= current_user.last_name.upcase %>
+      <% end %>
+    </h2>
+
+      <fieldset>
+        <p><label for="email">Email: <%= current_user.email%></label></p>
+        <p><label for="email">Location: <%= current_user.location  %></label></p>
+        <p><label for="email">Phone number: <%= current_user.phone_number %></label></p>
+
+        <%= link_to "Edit Profile", edit_user_registration_path(@current_user), class: "btn btn-success" %>
+      </fieldset>
+
+  </div>
+  <!-- end login -->
+
+</div>
+
