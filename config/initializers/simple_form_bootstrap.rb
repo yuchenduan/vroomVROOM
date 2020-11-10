@@ -99,4 +99,18 @@ SimpleForm.setup do |config|
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
-  # 
+  # vertical file input
+  config.wrappers :vertical_file, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :maxlength
+    b.optional :minlength
+    b.optional :readonly
+    b.use :label
+    b.use :input, class: 'form-control-file', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
+  # vertical multi select
+  config.wrappers :vertical_multi_select, tag: 'div', class:
