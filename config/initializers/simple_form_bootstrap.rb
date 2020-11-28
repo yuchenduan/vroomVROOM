@@ -174,4 +174,15 @@ SimpleForm.setup do |config|
   end
 
   # horizontal input for radio buttons and check boxes
-  config.
+  config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.use :label, class: 'col-sm-3 form-control-label'
+    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+      ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+    end
+  end
+
+  # horizon
