@@ -235,4 +235,25 @@ SimpleForm.setup do |config|
     b.use :label, class: 'col-sm-3 form-control-label'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-blo
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+    end
+  end
+
+
+  # inline forms
+  #
+  # inline default_wrapper
+  config.wrappers :inline_form, tag: 'span', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :maxlength
+    b.optional :minlength
+    b.optional :pattern
+    b.optional :min_max
+    b.optional :readonly
+    b.use :label, class: 'sr-only'
+
+    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.optional :hint, wrap_with: { tag: 'small', class:
