@@ -208,4 +208,17 @@ SimpleForm.setup do |config|
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input, error_class: 'is-invalid', valid_class: 'is-valid'
       ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-      ba.use :hint, wrap_with: { tag: 'small', cl
+      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+    end
+  end
+
+  # horizontal multi select
+  config.wrappers :horizontal_multi_select, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.use :label, class: 'col-sm-3 control-label'
+    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+      ba.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
+        bb.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+      end
+      ba.use :full_error, wrap_with: { tag: 'div', class: 'invali
