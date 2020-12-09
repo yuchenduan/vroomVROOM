@@ -308,4 +308,16 @@ SimpleForm.setup do |config|
   end
 
   # custom input for inline radio buttons and check boxes
-  config.wrappers :custom_collection_inline
+  config.wrappers :custom_collection_inline, item_wrapper_class: 'custom-control custom-control-inline', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+      ba.use :label_text
+    end
+    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
+  # custom file input
+  config.wrappers :custom_file, tag: 'div'
