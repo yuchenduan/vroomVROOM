@@ -348,4 +348,18 @@ SimpleForm.setup do |config|
   end
 
   # custom range input
-  config.wrappers :custom_range, 
+  config.wrappers :custom_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :readonly
+    b.optional :step
+    b.use :label, class: 'form-control-label'
+    b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  end
+
+
+  # Input Group - custom component
+  # see example app and config at https://github.com/rafaelfranca/simple_form-bootstrap
+  # config.wrappers :input_gr
