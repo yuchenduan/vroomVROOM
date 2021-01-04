@@ -10,4 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_
+ActiveRecord::Schema.define(version: 2018_06_10_161305) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "alerts", force: :cascade do |t|
+    t.string "coin_name"
+    t.float "price_above"
+    t.float "price_below"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_alerts_on_user_id"
+  end
+
+  create_table "apis", force: :cascade do |t|
+    t.string "publishable_key"
+    t.string "secret_key"
+    t.bigint "user_id"
+    t.bigint "exchange_id"
+    t.index ["exchange_id"], name: "index_apis_on_exchange_id"
+    t.index ["user_id"], name: "index_apis_on_user_id"
+  end
+
+  create_table "exchanges", forc
