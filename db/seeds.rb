@@ -3,4 +3,9 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the 
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Adding exchanges to database...."
+Exchange.create(base_endpoint: "https://bittrex.com", name: "Bittrex")
+Exchange.create(base_endpoint: "https://api.binance.com", name: "Binance")
