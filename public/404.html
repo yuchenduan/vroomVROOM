@@ -55,4 +55,30 @@
          -webkit-font-smoothing: subpixel-antialiased;
      }
 
-     .clear
+     .clearfix {
+         clear:both;
+         zoom: 1;
+     }
+     .clearfix:before, .clearfix:after {
+         content: "\0020";
+         display: block;
+         height: 0;
+         visibility: hidden;
+     }
+     .clearfix:after {
+         clear: both;
+     }
+    </style>
+    <style>
+  body.background.error-page-wrapper, .background.error-page-wrapper.preview {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+  }
+
+  .background.error-page-wrapper .content-container {
+    border-radius: 6px;
+    text-align: center;
+    box-s
