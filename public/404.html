@@ -329,4 +329,20 @@
 
 
     <script>
-     function ErrorPage(container, 
+     function ErrorPage(container, pageType, templateName) {
+       this.$container = $(container);
+       this.$contentContainer = this.$container.find(templateName == 'sign' ? '.sign-container' : '.content-container');
+       this.pageType = pageType;
+       this.templateName = templateName;
+     }
+
+     ErrorPage.prototype.centerContent = function () {
+       var containerHeight = this.$container.outerHeight()
+         , contentContainerHeight = this.$contentContainer.outerHeight()
+         , top = (containerHeight - contentContainerHeight) / 2
+         , offset = this.templateName == 'sign' ? -100 : 0;
+
+       this.$contentContainer.css('top', top + offset);
+     };
+
+     ErrorPage.prototype.initialize
