@@ -323,4 +323,20 @@
 
 
   </div>
- 
+  <div class="buttons-container single-button">
+    <a class="button" href="mailto:cointrail.secretteam@gmail.com" target="_blank"><span class="fa fa-warning"></span> Report A Problem</a>
+  </div>
+</div>
+
+
+    <script>
+     function ErrorPage(container, pageType, templateName) {
+       this.$container = $(container);
+       this.$contentContainer = this.$container.find(templateName == 'sign' ? '.sign-container' : '.content-container');
+       this.pageType = pageType;
+       this.templateName = templateName;
+     }
+
+     ErrorPage.prototype.centerContent = function () {
+       var containerHeight = this.$container.outerHeight()
+         , contentContainerHeight = this.$co
