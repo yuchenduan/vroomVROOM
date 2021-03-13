@@ -339,4 +339,24 @@
 
      ErrorPage.prototype.centerContent = function () {
        var containerHeight = this.$container.outerHeight()
-         , contentContainerHeight = this.$co
+         , contentContainerHeight = this.$contentContainer.outerHeight()
+         , top = (containerHeight - contentContainerHeight) / 2
+         , offset = this.templateName == 'sign' ? -100 : 0;
+
+       this.$contentContainer.css('top', top + offset);
+     };
+
+     ErrorPage.prototype.initialize = function () {
+       var self = this;
+
+       this.centerContent();
+       this.$container.on('resize', function (e) {
+         e.preventDefault();
+         e.stopPropagation();
+         self.centerContent();
+       });
+
+       // fades in content on the plain template
+       if (this.templateName == 'plain') {
+         window.setTimeout(function () {
+           self.$contentContainer.addClass('i
