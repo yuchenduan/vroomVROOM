@@ -310,4 +310,26 @@
   </head>
   <body class="background error-page-wrapper background-color background-image">
     <center>
-  <div class="content-c
+  <div class="content-container shadow">
+    <div class="head-line secondary-text-color">
+      Maintenance
+    </div>
+    <div class="subheader primary-text-color">
+      We're undergoing a bit of
+      scheduled maintenance.
+    </div>
+    <div class="hr"></div>
+    <div class="clearfix"></div>
+    <div class="context secondary-text-color">
+
+    <p>Sorry for the inconvenience. We'll be back up and running as fast as possible.</p>
+
+    </div>
+  </div>
+</center>
+
+
+    <script>
+     function ErrorPage(container, pageType, templateName) {
+       this.$container = $(container);
+       this.$contentContainer = this.$container.find(templateName == 'sign' ?
