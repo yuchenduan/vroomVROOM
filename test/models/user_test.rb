@@ -1,6 +1,7 @@
+
 require 'test_helper'
 
-class AlertTest < ActiveSupport::TestCase
+class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

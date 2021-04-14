@@ -1,6 +1,7 @@
+
 require 'test_helper'
 
-class AlertTest < ActiveSupport::TestCase
+class ExchangeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
