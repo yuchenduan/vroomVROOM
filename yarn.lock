@@ -393,4 +393,18 @@ babel-generator@^6.26.0:
 
 babel-helper-builder-binary-assignment-operator-visitor@^6.24.1:
   version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-helper-builder-binary-assignment-operator-visitor/
+  resolved "https://registry.yarnpkg.com/babel-helper-builder-binary-assignment-operator-visitor/-/babel-helper-builder-binary-assignment-operator-visitor-6.24.1.tgz#cce4517ada356f4220bcae8a02c2b346f9a56664"
+  integrity sha1-zORReto1b0IgvK6KAsKzRvmlZmQ=
+  dependencies:
+    babel-helper-explode-assignable-expression "^6.24.1"
+    babel-runtime "^6.22.0"
+    babel-types "^6.24.1"
+
+babel-helper-call-delegate@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-helper-call-delegate/-/babel-helper-call-delegate-6.24.1.tgz#ece6aacddc76e41c3461f88bfc575bd0daa2df8d"
+  integrity sha1-7Oaqzdx25Bw0YfiL/Fdb0Nqi340=
+  dependencies:
+    babel-helper-hoist-variables "^6.24.1"
+    babel-runtime "^6.22.0"
+    babel-traverse "^6
