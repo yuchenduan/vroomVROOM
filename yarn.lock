@@ -1802,4 +1802,27 @@ cssnano@^3.10.0:
     postcss-ordered-values "^2.1.0"
     postcss-reduce-idents "^2.2.2"
     postcss-reduce-initial "^1.0.0"
-    postcss-reduce-transforms "^1.0.3
+    postcss-reduce-transforms "^1.0.3"
+    postcss-svgo "^2.1.1"
+    postcss-unique-selectors "^2.0.2"
+    postcss-value-parser "^3.2.3"
+    postcss-zindex "^2.0.1"
+
+csso@~2.3.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-2.3.2.tgz#ddd52c587033f49e94b71fc55569f252e8ff5f85"
+  integrity sha1-3dUsWHAz9J6Utx/FVWnyUuj/X4U=
+  dependencies:
+    clap "^1.0.9"
+    source-map "^0.5.3"
+
+currently-unhandled@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
+  integrity sha1-mI3zP+qxke95mmE2nddsF635V+o=
+  dependencies:
+    array-find-index "^1.0.1"
+
+cyclist@~0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yar
