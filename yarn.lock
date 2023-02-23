@@ -6471,4 +6471,21 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
 type-is@~1.6.15, type-is@~1.6.16:
   version "1.6.16"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
-  integrity sha512-HRkVv/5q
+  integrity sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
+  dependencies:
+    media-typer "0.3.0"
+    mime-types "~2.1.18"
+
+typed.js@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.7.tgz#d4041ff351bc8995f9f8b6f54a2a23606b365e1a"
+  integrity sha512-/mFuH5cItrj3G9mfwkInWBUBc67UBQ7pXLebqKytOK74ITPl3Z9rtQme8An1j5e9IASMEfcwapf9ddtotm54fw==
+
+typedarray@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+  integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+uglify-es@^3.3.4:
+  version "3.3.9"
+  resolved "https://
