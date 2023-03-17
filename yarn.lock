@@ -6755,4 +6755,16 @@ webpack-dev-server@2.11.2:
     webpack-dev-middleware "1.12.2"
     yargs "6.6.0"
 
-webpack-ma
+webpack-manifest-plugin@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.3.2.tgz#5ea8ee5756359ddc1d98814324fe43496349a7d4"
+  integrity sha512-MX60Bv2G83Zks9pi3oLOmRgnPAnwrlMn+lftMrWBm199VQjk46/xgzBi9lPfpZldw2+EI2S+OevuLIaDuxCWRw==
+  dependencies:
+    fs-extra "^0.30.0"
+    lodash ">=3.5 <5"
+
+webpack-sources@^1.0.1, webpack-sources@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"
+  integrity sha512-aqYp18kPphgoO5c/+NaUvEeACtZjMESmDChuD3NBciVpah3XpMEU9VAAtIaB1BsfJWWTSdv8Vv1m3T0aRk2dUw==
+  dependenci
